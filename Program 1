@@ -1,0 +1,59 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main (){
+	int x;
+	char pckg;
+	
+	cout << "Enter the package you availed (A, B, or C):" << "\n";
+    cin >> pckg;
+
+	cout << "Enter the number of hours electricity was consumed:" << "\n";
+	cin >> x;
+
+switch(pckg){
+	case 'a':
+	case 'A':
+	if (x <= 10)
+    {
+    	cout << "Your monthly billing is: Php 995 only." << "\n" << "Your electric consumption is at " << x << " kwH.";
+    	break;
+    }
+
+	else if (x > 10)
+    {
+    	cout << "Your monthly billing is: Php 995." << "\n" << "Your electric consumption is at " << x << " kwH, leading to a final monthly of: Php " << (995 + ((x-10)*20)) << ".";
+    	break;
+	}
+
+	case 'b':
+    case 'B':
+	if (x <= 20)
+    {
+    	cout << "Your monthly billing is: Php 1,495 only." << "\n" << "Your electric consumption is at " << x << " kwH.";
+    	break;
+	}
+    
+    else if (x > 20)
+    {
+    	cout << "Your monthly billing is: Php 1,495." << "\n" << "Your electric consumption is at " << x << " kwH, leading to a final monthly of: Php " << (1495 + ((x-20)*10)) << ".";
+    	break;
+	}
+	
+    case 'c':
+    case 'C':
+    {
+    	cout << "Your monthly billing is: Php 1,995 only." << "\n" << "Your electric consumption is at " << x << " kwH.";
+    	break;
+    }
+    
+    default:
+    {
+    	cout << "Oops, please enter a valid package." << "\n" << "Note: If you availed a special offer, please kindly dial (XXXX)-XXX-XXXX for assistance.";
+    	break;
+	}
+}   
+}
