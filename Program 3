@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main (){
+	int x, y;
+	const float z = 2.5;  
+	float V;
+	int c;
+	
+	cout << "Please input your first value: " << "\n";
+	cin >> x;
+	
+	cout << "Please input your second value: " << "\n";
+	cin >> y;
+	
+	switch (x){
+		case 1:
+			if (y < 5 && y > 1){
+				static_cast<float>(x,y);
+				V = x * y * z;
+				cout << "The value of V is " << setw(10) << V;
+				break;
+			}
+			
+			else if (y >= 5){
+				static_cast<float>(x,y);
+				V = x + (y / z);
+				cout << "The value of V is " << setw(10) << V;
+				break;
+			}
+		
+		case 2:
+			if (y <= 5){
+				static_cast<float>(x,y);
+				V = abs((x-y)/z);
+				cout << "The value of V is " << setw(10) << V;
+				break;
+			}
+			
+			else if (y > 5){
+				static_cast<float>(x,y);
+				V = x - sqrt(y + z);
+				cout << "The value of V is " << setw(10) << V;
+				break;	
+			}
+			
+		default:
+			static_cast<float>(x,y);
+			V = x + y + z;
+			cout << "The value of V is " << setw(10) << V;
+			break;
+	}
+			
+}
