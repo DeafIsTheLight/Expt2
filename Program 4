@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main (){
+	int x, y, z;
+	
+	cout << "Please input your first value: " << "\n";
+	cin >> x;
+	
+	cout << "Please input your second value: " << "\n";
+	cin >> y;
+	
+	cout << "Please input your third value: " << "\n";
+	cin >> z;
+
+			if (x > y && x > z){
+				cout << "The largest value is " << x << ".";
+			}
+			
+			if (y > x && y > z){
+				cout << "The largest value is " << y << ".";
+			}
+			
+			if (z > x && z > y){
+				cout << "The largest value is " << z << ".";
+			}
+}
