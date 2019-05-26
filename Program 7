@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main (){
+	int y = 20, a = 0, b = 1, nVal = 0;
+
+    cout << "Desired number of terms: 20." << "\n";
+
+    cout << "Fibonacci Series: " << "\n";
+
+    for (int x = 1; x <= y; ++x)
+    {
+        nVal = a + b;
+        a = b;
+        b = nVal;
+        
+        cout << nVal << ", ";
+    }
+	
+}
