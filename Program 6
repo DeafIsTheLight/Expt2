@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main (){
+	int y, z, sum;
+
+    cout << "Enter a number: ";
+    cin >> y;
+
+    cout << "The sum from 1 to " << y << " is:";
+
+    for (int x = 1; x <= y; x++)
+    {
+    	sum += x;
+    }
+    
+    cout << sum;
+	
+}
